@@ -73,23 +73,25 @@ public class AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtO
 
     private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
     {
-        var userClaims = await _userManager.GetClaimsAsync(user);
+       // var userClaims = await _userManager.GetClaimsAsync(user);
         var roles = await _userManager.GetRolesAsync(user);
 
-        var roleClaims = new List<Claim>();
+        //var roleClaims = new List<Claim>();
 
-        for (int i = 0; i < roles.Count; i++)
-        {
-            roleClaims.Add(new Claim(ClaimTypes.Role, roles[i]));
-        }
+        //for (int i = 0; i < roles.Count; i++)
+        //{
+        //    roleClaims.Add(new Claim(ClaimTypes.Role, roles[i]));
+        //}
 
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim("uid", user.Id)
-        }.Union(userClaims).Union(roleClaims);
+            new Claim("uid", user.Id),
+            new Claim("name", user.LastName + ", " + user.FirstName ),
+            new Claim("role", string.Join(",", roles))
+        };
 
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.Value.SigningKey));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
