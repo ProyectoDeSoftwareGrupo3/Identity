@@ -77,15 +77,10 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
         return roles.ToList();
     }
 
-    public async Task<UserDto> UpdateUser(string userId, UpdateUserRequest request)
+    public async Task<bool> UpdateUserAsync(string userId, UpdateUserRequest request)
     {
-        var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId);
-
-        if (user == null)
-        {
-            return null;
-        }
-
+        var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == userId) ?? throw new Exception("Usuario no encontrado");
+        
         user.FirstName = request.FirstName;
         user.LastName = request.LastName;
         user.Email = request.Email;
@@ -94,14 +89,12 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
 
         _userManager.UpdateAsync(user);
 
-        return new UserDto
-        {
-            Id = user.Id,
-            Email = user.Email,
-            FirstName = user.FirstName,
-            LastName = user.LastName,
-            City = user.City
-        };
+        var result = await _userManager.UpdateAsync(user);
+
+        if (result.Succeeded)
+            return true;
+
+        throw new Exception($"Error actualizando usuario: {string.Join(", ", result.Errors.Select(e => e.Description))}");
     }
 
     public async Task<bool> UpdateUserRole(string userId, string roleId)

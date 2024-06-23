@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces.User;
+using Application.Request.UpdateUser;
 using Application.Validators;
 using Microsoft.AspNetCore.Mvc;
 
@@ -126,6 +127,28 @@ public class UserController(IUserService userService) : ControllerBase
         catch (Exception ex)
         {
             return StatusCode(500, new { message = "Se produjo un error al actualizar el rol de usuario.", details = ex.Message });
+        }
+    }
+
+    [HttpPut("{userId}")]
+    public async Task<IActionResult> UpdateUser(string userId, [FromBody] UpdateUserRequest request)
+    {
+        var validator = new UpdateUserRequestValidator();
+        var result = validator.Validate(request);
+
+        if (!result.IsValid)
+        {
+            return BadRequest(result.Errors);
+        }
+
+        try
+        {
+            await _userService.UpdateUserAsync(userId, request);
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
         }
     }
 }
