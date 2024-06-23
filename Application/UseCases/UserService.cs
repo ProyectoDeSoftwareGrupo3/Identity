@@ -20,7 +20,8 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
             Id = user.Id,
             Email = user.Email,
             FirstName = user.FirstName,
-            LastName = user.LastName
+            LastName = user.LastName,
+            City = user.City
         }).ToList();
     }
 
@@ -35,7 +36,8 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
             Id = user.Id,
             Email = user.Email,
             FirstName = user.FirstName,
-            LastName = user.LastName
+            LastName = user.LastName,
+            City = user.City
         };
     }
 
@@ -98,6 +100,7 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
             Email = user.Email,
             FirstName = user.FirstName,
             LastName = user.LastName,
+            City = user.City
         };
     }
 
