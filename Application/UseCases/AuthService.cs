@@ -62,7 +62,8 @@ public class AuthService(UserManager<ApplicationUser> userManager, IOptions<JwtO
 
         if (result.Succeeded)
         {
-            await _userManager.AddToRoleAsync(newUser, Roles.Miembro);
+            var role = string.IsNullOrEmpty(request.Role) ? Roles.Miembro : request.Role;
+            await _userManager.AddToRoleAsync(newUser, role);
             return new RegistrationResponse(newUser.Id);
         }
         else

@@ -16,4 +16,6 @@ public class RegistrationRequest
     public string Address { get; set; }
     [Required]
     public string City { get; set; }
+    [Required]
+    public string Role { get; set; }
 }

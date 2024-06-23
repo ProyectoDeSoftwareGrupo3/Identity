@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Domain.Constants;
+using FluentValidation;
 
 namespace Application.Request.Registration;
 
@@ -24,5 +25,15 @@ public class RegistrationRequestValidator : AbstractValidator<RegistrationReques
 
         RuleFor(x => x.City)
             .NotEmpty().WithMessage("La ciudad es requerida.");
+
+        RuleFor(x => x.Role)
+            .NotEmpty().WithMessage("El rol es requerido.")
+            .Must(BeAValidRole).WithMessage("El rol proporcionado no es válido.");
+    }
+
+    private bool BeAValidRole(string role)
+    {
+        var validRoles = new List<string> { Roles.Administrador, Roles.Refugio, Roles.Miembro };
+        return validRoles.Contains(role);
     }
 }
