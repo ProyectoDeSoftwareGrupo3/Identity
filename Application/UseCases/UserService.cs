@@ -21,6 +21,7 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
             Email = user.Email,
             FirstName = user.FirstName,
             LastName = user.LastName,
+            Address = user.Address,
             City = user.City
         }).ToList();
     }
@@ -37,6 +38,7 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
             Email = user.Email,
             FirstName = user.FirstName,
             LastName = user.LastName,
+            Address = user.Address,
             City = user.City
         };
     }
@@ -86,8 +88,7 @@ public class UserService(UserManager<ApplicationUser> userManager) : IUserServic
         user.Email = request.Email;
         user.Address = request.Address;
         user.City = request.City;
-
-        _userManager.UpdateAsync(user);
+        user.Address = request.Address;
 
         var result = await _userManager.UpdateAsync(user);
 

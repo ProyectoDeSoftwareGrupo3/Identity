@@ -14,4 +14,5 @@ public class UpdateUserRequest
     public string Address { get; set; }
     [Required]
     public string City { get; set; }
+    
 }
