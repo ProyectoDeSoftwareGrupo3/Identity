@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240422132955_initial")]
+    [Migration("20240624190836_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -108,7 +108,7 @@ namespace Infrastructure.Migrations
                             AccessFailedCount = 0,
                             Address = "Calle 9 N° 2946",
                             City = "Berazategui",
-                            ConcurrencyStamp = "e5051399-3985-4c2f-8913-2f70183cf6d3",
+                            ConcurrencyStamp = "796b349d-71ec-4a75-84e9-d05a2807874c",
                             Email = "bravo.jose.luis18@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Jose",
@@ -116,9 +116,9 @@ namespace Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "BRAVO.JOSE.LUIS18@GMAIL.COM",
                             NormalizedUserName = "BRAVO.JOSE.LUIS18@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFYPU6bw9KuMcdGPfXvQV2ccsH/5rNT9tNtywDpkgcoPiNf7kuQ99KXIDv+WfKWNfg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKtcjxpNVPBVuOmfukqsH2qMUCoqJQobf9gpkO+PIh6BT4pUNJ62kkfAtg5ixPYTjg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c0755a50-3f5e-440f-80b7-36e16e1eba00",
+                            SecurityStamp = "b934e6dd-745e-4da5-adf9-389873339583",
                             TwoFactorEnabled = false,
                             UserName = "bravo.jose.luis18@gmail.com"
                         },
@@ -128,7 +128,7 @@ namespace Infrastructure.Migrations
                             AccessFailedCount = 0,
                             Address = "Calle Los Andes N° 3850",
                             City = "Bernal",
-                            ConcurrencyStamp = "ad34d53a-f992-47b5-b7ed-46596c3efae8",
+                            ConcurrencyStamp = "ab7917f5-470b-4785-8f4d-4fff8f60935b",
                             Email = "alanleandrovargas03@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Alan",
@@ -136,9 +136,9 @@ namespace Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ALANLEANDROVARGAS03@gmail.com",
                             NormalizedUserName = "ALANLEANDROVARGAS03@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEL7zu2Cx1qhhCtrQxzWs1fILHORSpJgLp33nFiUiI4RjHdK6Ai4A1v44+4jFan5cgQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIIVuOPg3c8xpdSp2T6Lm+qLuvKQ2Yi4cTaY524j49qQaom/oWPM3v+wHJUDBBfFTw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c61e7a9e-ff7d-47ba-a49c-4ff6dfb3413f",
+                            SecurityStamp = "67ef9ff6-6309-4033-904e-7ac4c25c6a23",
                             TwoFactorEnabled = false,
                             UserName = "alanleandrovargas03@gmail.com"
                         },
@@ -148,7 +148,7 @@ namespace Infrastructure.Migrations
                             AccessFailedCount = 0,
                             Address = "Calle Grecia N°1234",
                             City = "Florencio Varela",
-                            ConcurrencyStamp = "cd40ea2f-902c-4acc-a696-132a4e6d4594",
+                            ConcurrencyStamp = "1037afe5-3ff5-4a8e-a195-88e1833e1d5e",
                             Email = "luciaoses1997@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Lucia",
@@ -156,9 +156,9 @@ namespace Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "LUCIAOSES1997@GMAIL.COM",
                             NormalizedUserName = "LUCIAOSES1997@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHyORvBmlXCVctDhWUst7S5dsOvGtUFE/c6F51mffmVu/l1+5xRSu3/gESzYngBWTg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMstGPxoJbbquBMPx4j6vlFLwQmkmPbx041/T7gtDUd1ySLZPMD/LmzcOvxAz9NOuA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cca20d58-0a6a-45aa-be3c-dc3cb5b4cf13",
+                            SecurityStamp = "29056e7c-1fbd-471e-9b7c-117e032c643d",
                             TwoFactorEnabled = false,
                             UserName = "luciaoses1997@gmail.com"
                         },
@@ -168,7 +168,7 @@ namespace Infrastructure.Migrations
                             AccessFailedCount = 0,
                             Address = "Viena n°1057",
                             City = "Florencio Varela",
-                            ConcurrencyStamp = "8e69154b-4597-424e-9da4-bc76bca68856",
+                            ConcurrencyStamp = "40d9c49f-eefe-451d-a062-e741de07266e",
                             Email = "diegorolon01@outlook.com",
                             EmailConfirmed = true,
                             FirstName = "Diego",
@@ -176,9 +176,9 @@ namespace Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "DIEGOROLON01@OUTLOOK.COM",
                             NormalizedUserName = "DIEGOROLON01@OUTLOOK.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECnNGC/TN8O/hdMkSMp+EKiQLm/P2z9mjy8wbnXSNaI8EvYZyxnDkAet1d8Md4C1jw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ99b/u3aCs68PhO68rRTqWeAVuOvA+ic6uy0rDufCCKUHXfzCfc+3W5zbAOHqbIfQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "98a6ec59-6078-4263-acea-cd2e7a2fb760",
+                            SecurityStamp = "ea78efd2-3610-40cb-af84-efbdcee50160",
                             TwoFactorEnabled = false,
                             UserName = "diegorolon01@outlook.com"
                         },
@@ -188,7 +188,7 @@ namespace Infrastructure.Migrations
                             AccessFailedCount = 0,
                             Address = "Adolfo Alsina 1238",
                             City = "Florencio Varela",
-                            ConcurrencyStamp = "cfcbd0c0-e274-45b5-b21c-febdb720d917",
+                            ConcurrencyStamp = "39e3f8f3-ee5f-4d53-be11-d1908474329b",
                             Email = "francopalacio03@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Franco",
@@ -196,9 +196,9 @@ namespace Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "FRANCOPALACIO03@GMAIL.COM",
                             NormalizedUserName = "FRANCOPALACIO03@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFSs/qDT6Ip9fAFk+maKgN6XOZJJ1fBrmNu+V4XefWfsCkihqAfeIDOv2+um+BAXKQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENx+mqz327vW7nNg+1zgqiA0kYoFjll9H4UKjkdHMWEsIXIV4CjQ07Zy5qUp3yJ+ng==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "14c819b3-31b1-46f7-8e99-3c81c40348ed",
+                            SecurityStamp = "d17779c1-bb60-4676-83a2-b6154e66aa27",
                             TwoFactorEnabled = false,
                             UserName = "francopalacio03@gmail.com"
                         });
@@ -349,7 +349,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             UserId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
-                            RoleId = "DCD3F190-A5F0-4A75-8E2C-095CBED0B551"
+                            RoleId = "3A6F1076-6B34-4251-83D9-E2C71519F402"
                         },
                         new
                         {
@@ -364,7 +364,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             UserId = "19BB7F59-3372-433F-B343-00E75953D3A3",
-                            RoleId = "DCD3F190-A5F0-4A75-8E2C-095CBED0B551"
+                            RoleId = "05456319-A1AD-4AF9-B68B-7B6FD4161A7F"
                         });
                 });
 

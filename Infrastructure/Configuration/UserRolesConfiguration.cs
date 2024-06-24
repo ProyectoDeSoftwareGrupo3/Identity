@@ -1,8 +1,6 @@
-﻿using Domain.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Runtime.ConstrainedExecution;
 
 namespace Infrastructure.Configuration;
 
@@ -20,7 +18,7 @@ public class UserRolesConfiguration : IEntityTypeConfiguration<IdentityUserRole<
             },
             new IdentityUserRole<string>
             {
-                RoleId = "DCD3F190-A5F0-4A75-8E2C-095CBED0B551",
+                RoleId = "3A6F1076-6B34-4251-83D9-E2C71519F402",
                 UserId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
             },
             new IdentityUserRole<string>
@@ -35,7 +33,7 @@ public class UserRolesConfiguration : IEntityTypeConfiguration<IdentityUserRole<
             },
             new IdentityUserRole<string>
             {
-                RoleId = "DCD3F190-A5F0-4A75-8E2C-095CBED0B551",
+                RoleId = "05456319-A1AD-4AF9-B68B-7B6FD4161A7F",
                 UserId = "19BB7F59-3372-433F-B343-00E75953D3A3"
             }
             );
